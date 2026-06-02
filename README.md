@@ -174,16 +174,13 @@ FastAPI menyediakan rute antarmuka backend berbasis JSON untuk mengelola materi 
 
 ---
 
-## Tim Pengembang dan Kolaborator (Kelompok 4)
+## Tim Pengembang dan Kolaborator (Kelompok 11)
 
-TutorQA dirancang, dilatih, dan dideploy oleh tim pengembang Kelas 3 Teknik Informatika A, Politeknik Caltex Riau:
+TutorQA dirancang, dilatih, dan dideploy oleh tim pengembang Politeknik Caltex Riau:
 
-* **Baldiagus Dianpama (NIM. 2255301029)** - *Modelling & Evaluasi*
-  * Bertanggung jawab dalam melatih dan mengevaluasi model mT5-small pada dataset TyDi QA split bahasa Indonesia, optimalisasi memori grafis, serta metrik performa ekstraksi jawaban.
-* **Ghaswul Fikri Fadhillah (NIM. 2255301076)** - *UI & Deployment*
-  * Bertanggung jawab atas perancangan desain antarmuka Editorial Glassmorphism, integrasi backend FastAPI dengan frontend HTML/CSS/JS, efek animasi 3D Carousel, dan manajemen server lokal.
-* **La Ode Fatahillah Muhammad (NIM. 2255301094)** - *Data Preparation*
-  * Bertanggung jawab atas pengumpulan data, prapemrosesan dataset TyDi QA, penanganan tokenisasi teks pelajaran, serta pemetaan teks masukan model.
+* **Ghaswul Fikri Fadhillah** (ghaswul23ti@mahasiswa.pcr.ac.id)
+* **Daffa Hadziq** (daffa23ti@mahasiswa.pcr.ac.id)
+* **Dafi Hibrizi** (dafi23ti@mahasiswa.pcr.ac.id)
 
 ---
 Dibuat untuk kemajuan kualitas pembelajaran siswa di Indonesia.  
