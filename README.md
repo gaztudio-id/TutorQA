@@ -11,6 +11,20 @@ Aplikasi ini menggunakan fine-tuned model bahasa mT5-small yang dilatih secara k
 
 ---
 
+## Tim Pengembang dan Kolaborator (Kelompok 11)
+
+TutorQA dirancang, dilatih, dan dideploy oleh tim pengembang Politeknik Caltex Riau:
+
+* **Ghaswul Fikri Fadhillah** (ghaswul23ti@mahasiswa.pcr.ac.id)
+* **Daffa Hadziq** (daffa23ti@mahasiswa.pcr.ac.id)
+* **Dafi Hibrizi** (dafi23ti@mahasiswa.pcr.ac.id)
+
+---
+Dibuat untuk kemajuan kualitas pembelajaran siswa di Indonesia.  
+**Politeknik Caltex Riau - TA 2025/2026**
+
+---
+
 ## Arsitektur Sistem dan Alur Kerja
 
 TutorQA beroperasi sebagai sistem modular terintegrasi yang memisahkan pengolahan dokumen, inferensi model NLP, dan antarmuka interaktif:
@@ -172,16 +186,4 @@ FastAPI menyediakan rute antarmuka backend berbasis JSON untuk mengelola materi 
   }
   ```
 
----
 
-## Tim Pengembang dan Kolaborator (Kelompok 11)
-
-TutorQA dirancang, dilatih, dan dideploy oleh tim pengembang Politeknik Caltex Riau:
-
-* **Ghaswul Fikri Fadhillah** (ghaswul23ti@mahasiswa.pcr.ac.id)
-* **Daffa Hadziq** (daffa23ti@mahasiswa.pcr.ac.id)
-* **Dafi Hibrizi** (dafi23ti@mahasiswa.pcr.ac.id)
-
----
-Dibuat untuk kemajuan kualitas pembelajaran siswa di Indonesia.  
-**Politeknik Caltex Riau - TA 2025/2026**
