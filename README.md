@@ -9,19 +9,7 @@ TutorQA adalah platform asisten belajar mandiri virtual interaktif yang dirancan
 
 Aplikasi ini menggunakan fine-tuned model bahasa mT5-small yang dilatih secara khusus pada dataset TyDi QA (Indonesian split) untuk melakukan ekstraksi jawaban yang presisi dan wajar secara kronologis sesuai materi asli.
 
----
-
-## Tim Pengembang dan Kolaborator (Kelompok 11)
-
-TutorQA dirancang, dilatih, dan dideploy oleh tim pengembang Politeknik Caltex Riau:
-
-* **Ghaswul Fikri Fadhillah** (ghaswul23ti@mahasiswa.pcr.ac.id)
-* **Daffa Hadziq** (daffa23ti@mahasiswa.pcr.ac.id)
-* **Dafi Hibrizi** (dafi23ti@mahasiswa.pcr.ac.id)
-
----
-Dibuat untuk kemajuan kualitas pembelajaran siswa di Indonesia.  
-**Politeknik Caltex Riau - TA 2025/2026**
+Developed by **Kelompok 11 — Politeknik Caltex Riau**: Ghaswul Fikri Fadhillah ([ghaswul23ti@mahasiswa.pcr.ac.id](mailto:ghaswul23ti@mahasiswa.pcr.ac.id)), Daffa Hadziq ([daffa23ti@mahasiswa.pcr.ac.id](mailto:daffa23ti@mahasiswa.pcr.ac.id)), and Dafi Hibrizi ([dafi23ti@mahasiswa.pcr.ac.id](mailto:dafi23ti@mahasiswa.pcr.ac.id)).
 
 ---
 
