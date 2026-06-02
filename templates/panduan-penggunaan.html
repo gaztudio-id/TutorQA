@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panduan Pengguna — TutorQA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/styles.css?v=1.0.5" />
+</head>
+<body class="page-guide">
+  <div id="pageLoader" class="page-loader" aria-hidden="true">
+    <div class="loader-brand">
+      <h1 class="loader-logo">Tutor<span>QA</span></h1>
+      <span class="loader-orb" aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <div class="island-nav-wrap" id="islandNav">
+    <nav class="island-nav" aria-label="Navigasi">
+      <a href="/" class="island-logo"><span class="logo-dot"></span> TutorQA</a>
+      <div class="island-links">
+        <a href="/fitur">Fitur</a>
+        <a href="/panduan" class="active">Panduan</a>
+      </div>
+      <a href="/belajar" class="island-cta">Mulai belajar</a>
+    </nav>
+  </div>
+
+  <main class="guide-main">
+    <header class="guide-hero reveal visible">
+      <span class="pill-badge">Panduan Lengkap</span>
+      <h1>Cara menggunakan TutorQA</h1>
+      <p>Pelajari cara memaksimalkan fitur pendamping belajar mandiri Anda — mulai dari materi hingga tanya jawab virtual.</p>
+    </header>
+
+    <div class="guide-layout">
+      <!-- Sticky Sidebar Quick Navigation -->
+      <aside class="guide-sidebar">
+        <div class="guide-nav-card">
+          <p class="guide-nav-title">Topik Panduan</p>
+          <div class="guide-nav-links">
+            <a href="#halaman-utama" class="guide-nav-link active">1. Halaman Utama</a>
+            <a href="#menyiapkan-materi" class="guide-nav-link">2. Menyiapkan Materi</a>
+            <a href="#saran-pertanyaan" class="guide-nav-link">3. Saran Pertanyaan</a>
+            <a href="#mode-jawaban" class="guide-nav-link">4. Mode Jawaban</a>
+            <a href="#mengirim-pertanyaan" class="guide-nav-link">5. Mengirim Pertanyaan</a>
+            <a href="#tombol-bersihkan" class="guide-nav-link">6. Bersihkan Chat</a>
+            <a href="#troubleshooting" class="guide-nav-link">7. Mengatasi Masalah</a>
+            <a href="#tips-belajar" class="guide-nav-link">8. Tips Belajar Efektif</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Guide Content Column -->
+      <div class="guide-content">
+        <section id="halaman-utama" class="reveal">
+          <h2>1. Halaman utama</h2>
+          <p>Saat pertama kali membuka TutorQA, Anda disuguhkan antarmuka yang bersih dan interaktif:</p>
+          <ul>
+            <li><strong>Fitur</strong> — Penjelasan singkat mengenai keunggulan TutorQA.</li>
+            <li><strong>Ruang Belajar</strong> — Area kerja utama untuk belajar, mengunggah materi, dan bertukar tanya jawab.</li>
+            <li><strong>Panduan</strong> — Portal bantuan interaktif (halaman ini).</li>
+          </ul>
+          <p>Klik tombol <strong>Mulai belajar</strong> pada navigasi atas untuk langsung meluncur ke Ruang Belajar.</p>
+        </section>
+
+        <section id="menyiapkan-materi" class="reveal">
+          <h2>2. Menyiapkan materi</h2>
+          <p>Sistem membutuhkan konteks modul untuk menyusun jawaban. Anda dapat menyiapkannya dengan dua cara:</p>
+          <h3>A. Mengunggah PDF</h3>
+          <ol>
+            <li>Masuk ke Ruang Belajar, cari panel <strong>Materi PDF</strong> di sisi kiri.</li>
+            <li>Seret berkas PDF pelajaran Anda atau klik untuk memilih file (ukuran maksimal 10 MB).</li>
+            <li>Tunggu hingga berkas selesai diunggah dan muncul label status <strong>Materi Aktif</strong>.</li>
+          </ol>
+          <h3>B. Memasukkan Konteks Manual</h3>
+          <ol>
+            <li>Salin cuplikan teks pelajaran penting dari buku digital atau modul Anda.</li>
+            <li>Tempelkan teks tersebut ke kolom input <strong>Konteks manual</strong>.</li>
+            <li>Sistem akan mendeteksi isi materi secara instan.</li>
+          </ol>
+          <div class="guide-tip">Pilihlah salah satu metode per sesi. Jika konteks manual diisi, materi dari berkas PDF aktif akan otomatis dinonaktifkan sementara.</div>
+        </section>
+
+        <section id="saran-pertanyaan" class="reveal">
+          <h2>3. Memahami saran pertanyaan</h2>
+          <p>Saran pertanyaan di panel kiri dibuat secara dinamis menggunakan algoritma AI cerdas yang membaca isi materi Anda, bukan berupa *template* statis. Sistem mencari kalimat penjelas (seperti "X adalah Y" atau daftar jenis-jenis sesuatu) dan merumuskan soal yang relevan secara otomatis.</p>
+          <p>Klik salah satu chip saran pertanyaan untuk langsung menyalinnya ke kotak obrolan, lalu tekan kirim.</p>
+        </section>
+
+        <section id="mode-jawaban" class="reveal">
+          <h2>4. Mode jawaban</h2>
+          <p>Sesuaikan cara Anda belajar dengan memilih salah satu dari tiga mode jawaban yang tersedia sebelum mengajukan pertanyaan:</p>
+          <table class="guide-table">
+            <thead>
+              <tr>
+                <th>Mode Jawaban</th>
+                <th>Hasil Format Respons</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Mendalam</strong></td>
+                <td>Ulasan komprehensif beberapa paragraf disertai ringkasan poin-poin penting.</td>
+              </tr>
+              <tr>
+                <td><strong>Ringkas</strong></td>
+                <td>Jawaban satu kalimat lugas, padat, dan langsung pada inti informasi.</td>
+              </tr>
+              <tr>
+                <td><strong>Langkah</strong></td>
+                <td>Penjelasan berurutan secara sistematis (langkah 1, 2, 3...) untuk pemecahan proses.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="mengirim-pertanyaan" class="reveal">
+          <h2>5. Mengirim pertanyaan</h2>
+          <ol>
+            <li>Ketikkan pertanyaan Anda di kolom input obrolan, atau klik salah satu Saran Pertanyaan.</li>
+            <li>Tekan tombol <kbd>Enter</kbd> untuk mengirim (<kbd>Shift + Enter</kbd> jika ingin membuat baris baru).</li>
+            <li>Sistem akan menyusun jawaban cerdas berbasis mT5. Proses ini biasanya membutuhkan waktu beberapa detik untuk hasil terbaik.</li>
+          </ol>
+        </section>
+
+        <section id="tombol-bersihkan" class="reveal">
+          <h2>6. Bersihkan Chat</h2>
+          <p>Tombol <strong>Bersihkan</strong> di sudut kanan atas panel obrolan berguna untuk membersihkan riwayat chat agar ruang belajar kembali bersih. Tindakan ini <strong>tidak akan menghapus</strong> modul PDF atau teks manual aktif Anda.</p>
+        </section>
+
+        <section id="troubleshooting" class="reveal">
+          <h2>7. Mengatasi Masalah</h2>
+          <ul>
+            <li><strong>Jawaban Kurang Tepat:</strong> Pastikan pertanyaan Anda relevan dengan materi yang diunggah. Gunakan istilah atau kata kunci yang persis tertulis dalam teks.</li>
+            <li><strong>Error / Gagal Menjawab:</strong> Periksa kembali koneksi internet Anda atau pastikan ukuran PDF tidak melampaui batas maksimal 10 MB.</li>
+            <li><strong>Pertanyaan Spesifik:</strong> Ajukan pertanyaan secara spesifik (mis. "Apa definisi X?") alih-alih pertanyaan luas seperti "Jelaskan bab ini".</li>
+          </ul>
+        </section>
+
+        <section id="tips-belajar" class="reveal">
+          <h2>8. Tips Belajar Efektif</h2>
+          <ul>
+            <li>Unggah per bab atau per sub-bab materi agar jawaban yang dihasilkan tetap fokus dan tidak bercampur aduk.</li>
+            <li>Gunakan mode <strong>Ringkas</strong> untuk kuis mandiri atau menghafal fakta cepat, dan mode <strong>Mendalam</strong> untuk persiapan ujian esai.</li>
+            <li>Simpan poin-poin penting di bawah mode Mendalam sebagai catatan ringkasan belajar harian Anda.</li>
+          </ul>
+        </section>
+
+        <section class="guide-cta reveal">
+          <h2>Siap memulai belajar mandiri?</h2>
+          <p>Buka ruang belajar sekarang, unggah materi modul Anda, dan rasakan pendampingan tutor virtual terbaik.</p>
+          <a href="/#belajar" class="btn">Buka Ruang Belajar</a>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer-synthesis">
+    <div class="container footer-grid" style="grid-template-columns: 1.8fr 1.2fr; gap: 64px;">
+      <div class="footer-brand-col">
+        <p class="footer-logo-text" style="margin-bottom: 4px;">Tutor<span>QA</span></p>
+        <p class="footer-address" style="margin-bottom: 16px;">
+          <strong>Sistem Tanya Jawab Belajar Mandiri</strong>
+        </p>
+        <p class="footer-desc" style="font-size: 13.5px; line-height: 1.65; opacity: 0.75; max-width: 580px;">
+          TutorQA adalah pendamping belajar mandiri interaktif yang memanfaatkan kecerdasan buatan berbasis fine-tuning model bahasa <strong>mT5-small</strong> pada dataset <strong>TyDi QA (Indonesian split)</strong>. Sistem ini dirancang untuk mendampingi pemahaman materi secara obyektif melalui ekstraksi span jawaban semantik dan saran pertanyaan konseptual dinamis langsung dari dokumen pelajaran Anda.
+        </p>
+      </div>
+      <div class="footer-links-col" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;">
+        <p class="footer-col-title">Navigasi Utama</p>
+        <a href="/fitur" style="margin-bottom: 12px; display: inline-flex; align-items: center; gap: 8px;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Fitur Unggulan
+        </a>
+        <a href="/panduan" style="margin-bottom: 12px; display: inline-flex; align-items: center; gap: 8px;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Panduan Penggunaan
+        </a>
+        <a href="/belajar" style="margin-bottom: 12px; display: inline-flex; align-items: center; gap: 8px;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Mulai Belajar
+        </a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 TutorQA. Dibuat dengan dedikasi untuk kemajuan edukasi siswa di Indonesia.</p>
+    </div>
+  </footer>
+
+  <script src="/static/js/app.js?v=1.0.5"></script>
+</body>
+</html>

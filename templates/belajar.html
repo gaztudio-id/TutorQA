@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ruang Belajar — TutorQA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/styles.css?v=1.0.5" />
+</head>
+<body class="page-guide">
+  <!-- Page Loader -->
+  <div id="pageLoader" class="page-loader" aria-hidden="true">
+    <div class="loader-brand">
+      <h1 class="loader-logo">Tutor<span>QA</span></h1>
+      <span class="loader-orb" aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <div class="bg-decor" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+  </div>
+
+  <!-- Dynamic Island Nav -->
+  <div class="island-nav-wrap" id="islandNav">
+    <nav class="island-nav" aria-label="Navigasi utama">
+      <a href="/" class="island-logo"><span class="logo-dot"></span> TutorQA</a>
+      <div class="island-links">
+        <a href="/fitur">Fitur</a>
+        <a href="/panduan">Panduan</a>
+      </div>
+      <a href="/belajar" class="island-cta">Mulai belajar</a>
+    </nav>
+  </div>
+
+  <main class="main-flow" style="padding-bottom: 80px;">
+    <div class="container">
+      <div class="qa-shell">
+        <div class="qa-head">
+          <div>
+            <span class="section-tag">Ruang Belajar Virtual</span>
+            <h2 class="section-title">Asisten Belajar Mandiri Anda</h2>
+          </div>
+          <div class="mode-selector" role="group" aria-label="Mode jawaban">
+            <button type="button" class="mode-chip active" data-mode="mendalam">Mendalam</button>
+            <button type="button" class="mode-chip" data-mode="ringkas">Ringkas</button>
+            <button type="button" class="mode-chip" data-mode="langkah">Langkah</button>
+          </div>
+        </div>
+        <div class="qa-layout">
+          <aside class="sidebar">
+            <div class="panel">
+              <label class="panel-label">Materi PDF</label>
+              <div class="upload-zone" id="uploadZone">
+                <input type="file" id="fileInput" accept=".pdf" hidden />
+                <div class="upload-icon-wrap">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 16V4m0 0L8 8m4-4 4 4M4 20h16"/></svg>
+                </div>
+                <span class="upload-text">Seret atau pilih file</span>
+                <small>Maks. 10 MB</small>
+              </div>
+              <div id="docInfo" class="doc-info hidden">
+                <span class="doc-tag"><span class="pulse-dot"></span> Materi aktif</span>
+                <p id="docName"></p>
+                <p id="docStats" class="muted"></p>
+              </div>
+            </div>
+            <div class="panel">
+              <label class="panel-label" for="manualContext">Konteks manual</label>
+              <textarea id="manualContext" rows="4" placeholder="Tempel cuplikan teks pelajaran..."></textarea>
+            </div>
+            <div class="panel panel-suggestions">
+              <label class="panel-label">Saran pertanyaan <span class="label-hint">dari materi Anda</span></label>
+              <div class="suggestions" id="suggestions">
+                <p class="muted empty-hint">Isi materi untuk melihat saran.</p>
+              </div>
+            </div>
+          </aside>
+          <div class="chat-panel">
+            <div class="chat-header">
+              <div class="chat-header-info">
+                <div class="avatar bot-avatar sm" aria-hidden="true"></div>
+                <div>
+                  <strong>TutorQA</strong>
+                  <span id="chatStatus" class="chat-status">Siap membantu</span>
+                </div>
+              </div>
+              <button type="button" class="btn-clear" id="clearChat">Bersihkan</button>
+            </div>
+            <div id="chatMessages" class="chat-messages">
+              <div class="message bot welcome-msg">
+                <div class="avatar bot-avatar" aria-hidden="true"></div>
+                <div class="bubble">
+                  <p><strong>Selamat belajar!</strong></p>
+                  <p>Unggah materi PDF atau tempel teks di panel samping. Saran pertanyaan otomatis akan menyesuaikan isi materi Anda secara cerdas.</p>
+                </div>
+              </div>
+            </div>
+            <form id="askForm" class="ask-form">
+              <div class="input-wrap">
+                <textarea id="questionInput" rows="1" placeholder="Tulis pertanyaan Anda..." required></textarea>
+                <span class="input-hint">Enter kirim · Shift+Enter baris baru</span>
+              </div>
+              <button type="submit" class="btn-send" id="askBtn" aria-label="Kirim">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer-synthesis">
+    <div class="container footer-grid" style="grid-template-columns: 1.8fr 1.2fr; gap: 64px;">
+      <div class="footer-brand-col">
+        <p class="footer-logo-text" style="margin-bottom: 4px;">Tutor<span>QA</span></p>
+        <p class="footer-address" style="margin-bottom: 16px;">
+          <strong>Sistem Tanya Jawab Belajar Mandiri</strong>
+        </p>
+        <p class="footer-desc" style="font-size: 13.5px; line-height: 1.65; opacity: 0.75; max-width: 580px;">
+          TutorQA adalah pendamping belajar mandiri interaktif yang memanfaatkan kecerdasan buatan berbasis fine-tuning model bahasa <strong>mT5-small</strong> pada dataset <strong>TyDi QA (Indonesian split)</strong>. Sistem ini dirancang untuk mendampingi pemahaman materi secara obyektif melalui ekstraksi span jawaban semantik dan saran pertanyaan konseptual dinamis langsung dari dokumen pelajaran Anda.
+        </p>
+      </div>
+      <div class="footer-links-col" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;">
+        <p class="footer-col-title">Navigasi Utama</p>
+        <a href="/fitur" style="margin-bottom: 12px; display: inline-flex; align-items: center; gap: 8px;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Fitur Unggulan
+        </a>
+        <a href="/panduan" style="margin-bottom: 12px; display: inline-flex; align-items: center; gap: 8px;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Panduan Penggunaan
+        </a>
+        <a href="/belajar" style="margin-bottom: 12px; display: inline-flex; align-items: center; gap: 8px;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Mulai Belajar
+        </a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 TutorQA. Dibuat dengan dedikasi untuk kemajuan edukasi siswa di Indonesia.</p>
+    </div>
+  </footer>
+
+  <script src="/static/js/app.js?v=1.0.5"></script>
+</body>
+</html>
