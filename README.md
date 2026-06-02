@@ -86,21 +86,42 @@ NLP/
 
 ### 1. Kebutuhan Sistem
 * Python 3.10 atau versi di atasnya.
-* RAM minimal 8GB (sangat disarankan RAM 16GB untuk menjalankan inferensi model dengan lancar).
-* Direktori `mt5-qa-indonesia/` di root proyek yang memuat berkas bobot model terlatih HuggingFace (seperti `model.safetensors`, `config.json`, dan tokenizer terkait).
+* RAM minimal 8GB (disarankan RAM 16GB atau lebih untuk menjalankan inferensi model dengan lancar).
 
-### 2. Pemasangan Pustaka Dependensi
-Buka shell terminal Anda, arahkan ke direktori proyek, dan jalankan perintah berikut:
+### 2. Pelatihan & Penyusunan Model (mT5)
+Model ekstraksi jawaban menggunakan fine-tuned mT5-small yang harus diletakkan secara lokal di folder `mt5-qa-indonesia/`. Berikut langkah untuk mendapatkan berkas model tersebut:
+
+1. **Jalankan Pelatihan di Google Colab**:
+   - Buka notebook [ModelT5Train_NLP.ipynb](file:///c:/Punya%20GW/01.%20CODE/NLP/notebooks/ModelT5Train_NLP.ipynb) yang berada di direktori `notebooks/`.
+   - Unggah notebook tersebut ke Google Colab dan jalankan seluruh sel untuk melatih model menggunakan dataset TyDi QA (Indonesian split).
+   - Setelah proses selesai, sel terakhir pada notebook akan otomatis menghubungkan ke Google Drive Anda dan menyimpan bobot model serta tokenizer ke folder `/NLP/mt5-qa-indonesia/`.
+
+2. **Unduh Berkas Model**:
+   - Unduh folder `mt5-qa-indonesia` dari Google Drive Anda.
+   - Pindahkan folder tersebut ke direktori utama (root) proyek ini sehingga strukturnya seperti berikut:
+     ```text
+     NLP/
+     ├── mt5-qa-indonesia/
+     │   ├── config.json
+     │   ├── generation_config.json
+     │   ├── model.safetensors
+     │   ├── spiece.model
+     │   ├── special_tokens_map.json
+     │   └── tokenizer_config.json
+     ```
+
+### 3. Pemasangan Pustaka Dependensi
+Buka shell terminal Anda, arahkan ke direktori proyek, dan jalankan perintah berikut untuk menginstal seluruh pustaka Python yang diperlukan:
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Jalankan Aplikasi
-Jalankan script bootloader di root direktori untuk meluncurkan server FastAPI (Uvicorn):
+### 4. Menjalankan Aplikasi
+Jalankan script bootloader di root direktori untuk meluncurkan server FastAPI (Uvicorn) secara lokal:
 ```bash
 python run.py
 ```
-Setelah server berhasil diluncurkan, akses aplikasi melalui peramban web pada alamat:
+Setelah server berhasil dijalankan, buka peramban web dan akses aplikasi pada alamat:
 [http://localhost:8000](http://localhost:8000)
 
 ---
