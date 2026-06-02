@@ -154,3 +154,6 @@ mt5-qa-indonesia/
 *.pem
 *.key
 *.secret
+
+# Local personal developer portrait (ignore in Git but keep locally)
+static/ghaswul_profil.png
