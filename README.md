@@ -69,7 +69,7 @@ NLP/
 │   │   └── styles.css         # Lembar gaya Editorial Glassmorphism
 │   ├── js/
 │   │   └── app.js             # Efek Carousel 3D & UI obrolan interaktif
-│   └── ghaswul_profil.png     # Foto portrait pengembang
+│   └── avatar.png             # Foto avatar pengembang
 ├── templates/                 # Tampilan UI HTML5
 │   ├── belajar.html           # Panel belajar & kuis mandiri
 │   ├── fitur.html             # Rincian arsitektur teknologi model
