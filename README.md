@@ -195,4 +195,21 @@ FastAPI menyediakan rute antarmuka backend berbasis JSON untuk mengelola materi 
   }
   ```
 
+---
+
+## Aturan dan Konsistensi Pengembangan (Developer Guidelines)
+
+Untuk menjaga konsistensi, stabilitas, dan kerapian repositori TutorQA, seluruh pengembang atau kontributor baru diharapkan mematuhi aturan terstruktur berikut:
+
+### 1. Manajemen Berkas dan Git
+* **Kepatuhan Berkas Sensitif/Besar**: Jangan pernah memodifikasi atau menghapus aturan `.gitignore`. Berkas besar seperti direktori model (`mt5-qa-indonesia/`), berkas konfigurasi lokal (`.env`), serta foto profil pribadi pengembang (`static/*_profil.png`) dilarang keras diunggah ke repositori GitHub.
+* **Alur Branch**: Disarankan untuk tidak melakukan push langsung ke branch `main`. Buat branch baru untuk setiap pengerjaan fitur baru (misalnya `feature/nama-fitur`), lakukan pengujian lokal, lalu ajukan *Pull Request* (PR) untuk ditinjau bersama.
+
+### 2. Standar Penulisan Kode (Code Style)
+* **Python**: Ikuti standar PEP 8. Gunakan nama variabel dan fungsi yang deskriptif serta berikan komentar/docstring yang jelas untuk logika yang kompleks.
+* **Format HTML/CSS/JS**: Pertahankan arsitektur *Editorial Glassmorphic Design* dan tipografi *Plus Jakarta Sans* pada frontend untuk menjaga estetika premium aplikasi.
+
+### 3. Eksekusi dan Pengujian
+* **Bootloader Utama**: Selalu gunakan berkas `run.py` untuk meluncurkan server FastAPI secara lokal. Jangan mengubah port default `8000` pada repositori utama kecuali untuk pengujian lokal sementara yang konfliknya sudah diatasi.
+
 
