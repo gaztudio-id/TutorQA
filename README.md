@@ -36,9 +36,9 @@ graph TD
 * **Academic Question Generator (app/suggestions.py):** Menganalisis kata kunci akademis penting dari materi, menyaring kata-kata sampah pembagian kelompok, dan menyusun saran pertanyaan konseptual cerdas (seperti "Apa perbedaan konsep A dan B?") secara dinamis untuk memandu siswa belajar secara aktif.
 
 ### 2. Frontend Web Experience (static/ & templates/)
-* **Editorial Glassmorphic Design System (static/css/styles.css):** Antarmuka web modern dengan tipografi artistik Plus Jakarta Sans, tata letak asimetris premium, efek kaca transparan (glassmorphism), dan skema warna biru malam (indigo) yang kontras dipadukan aksen hijau-neon (lime).
-* **3D Polar Carousel Wheel (static/js/app.js):** Kolase visual 3D yang berputar lembut secara interaktif mengikuti pergerakan scroll halaman utama (sticky scroll track), memberikan impresi visual kelas atas yang dinamis.
-* **Tactile 3D Cards:** Kartu profil pengembang interaktif dengan efek rotasi sumbu-Y 3D realistis yang melayang (`translateY(-6px)`) dan memproyeksikan bayangan dramatis dinamis (layered ambient drop shadows).
+* **Editorial Glassmorphic Design System (static/css/styles.css):** Antarmuka web modern dengan tipografi *Plus Jakarta Sans*, tata letak asimetris premium, efek kaca transparan (glassmorphism), dan skema warna biru malam (indigo) dipadukan aksen hijau-neon (lime).
+* **3D Polar Carousel Wheel (static/js/app.js):** Kolase visual 3D pada halaman utama yang berputar lembut mengikuti scroll, memberikan impresi visual dinamis.
+* **Dynamic Island Navbar:** Navigasi mengambang berbentuk pil yang muncul setelah halaman di-scroll, menciptakan pengalaman browsing yang modern.
 
 ---
 
@@ -67,12 +67,11 @@ NLP/
 ├── static/                    # Aset visual frontend web
 │   ├── css/
 │   │   └── styles.css         # Lembar gaya Editorial Glassmorphism
-│   ├── js/
-│   │   └── app.js             # Efek Carousel 3D & UI obrolan interaktif
-│   └── ghaswul_profil.png     # Foto portrait pengembang (lokal)
+│   └── js/
+│       └── app.js             # Efek Carousel 3D & UI obrolan interaktif
 ├── templates/                 # Tampilan UI HTML5
 │   ├── belajar.html           # Panel belajar & kuis mandiri
-│   ├── fitur.html             # Rincian arsitektur teknologi model
+│   ├── fitur.html             # Penjelasan fitur & cara kerja sistem
 │   ├── index.html             # Halaman Beranda utama
 │   └── panduan-penggunaan.html# Panduan siswa interaktif
 ├── mt5-qa-indonesia/          # Direktori berkas bobot fine-tuned model mT5
@@ -202,7 +201,7 @@ FastAPI menyediakan rute antarmuka backend berbasis JSON untuk mengelola materi 
 Untuk menjaga konsistensi, stabilitas, dan kerapian repositori TutorQA, seluruh pengembang atau kontributor baru diharapkan mematuhi aturan terstruktur berikut:
 
 ### 1. Manajemen Berkas dan Git
-* **Kepatuhan Berkas Sensitif/Besar**: Jangan pernah memodifikasi atau menghapus aturan `.gitignore`. Berkas besar seperti direktori model (`mt5-qa-indonesia/`), berkas konfigurasi lokal (`.env`), serta foto profil pribadi pengembang (`static/*_profil.png`) dilarang keras diunggah ke repositori GitHub.
+* **Kepatuhan Berkas Sensitif/Besar**: Jangan pernah memodifikasi atau menghapus aturan `.gitignore`. Berkas besar seperti direktori model (`mt5-qa-indonesia/`) dan berkas konfigurasi lokal (`.env`) dilarang keras diunggah ke repositori GitHub.
 * **Alur Branch**: Disarankan untuk tidak melakukan push langsung ke branch `main`. Buat branch baru untuk setiap pengerjaan fitur baru (misalnya `feature/nama-fitur`), lakukan pengujian lokal, lalu ajukan *Pull Request* (PR) untuk ditinjau bersama.
 
 ### 2. Standar Penulisan Kode (Code Style)
