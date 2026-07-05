@@ -55,12 +55,6 @@ NLP/
 │   ├── inference.py           # Kelas inferensi lokal model mT5-small
 │   ├── main.py                # REST API router & static resource server
 │   └── suggestions.py         # Formulasi saran kuis akademik cerdas
-├── docs/                      # Dokumen proposal & panduan cetak
-│   ├── Draft Proposal_Kelompok4.pdf
-│   ├── PANDUAN_DEVELOPER.html # Panduan developer format HTML premium
-│   └── synthesis.capital-design.md
-├── notebooks/                 # Notebook pelatihan AI
-│   └── ModelT5Train_NLP.ipynb # Google Colab Notebook fine-tuning mT5
 ├── scripts/                   # Skrip utilitas internal pengembang
 │   ├── create_notebook.py
 │   └── create_notebook_final.py
@@ -87,27 +81,18 @@ NLP/
 * Python 3.10 atau versi di atasnya.
 * RAM minimal 8GB (disarankan RAM 16GB atau lebih untuk menjalankan inferensi model dengan lancar).
 
-### 2. Pelatihan & Penyusunan Model (mT5)
-Model ekstraksi jawaban menggunakan fine-tuned mT5-small yang harus diletakkan secara lokal di folder `mt5-qa-indonesia/`. Berikut langkah untuk mendapatkan berkas model tersebut:
-
-1. **Jalankan Pelatihan di Google Colab**:
-   - Buka notebook [ModelT5Train_NLP.ipynb](file:///c:/Punya%20GW/01.%20CODE/NLP/notebooks/ModelT5Train_NLP.ipynb) yang berada di direktori `notebooks/`.
-   - Unggah notebook tersebut ke Google Colab dan jalankan seluruh sel untuk melatih model menggunakan dataset TyDi QA (Indonesian split).
-   - Setelah proses selesai, sel terakhir pada notebook akan otomatis menghubungkan ke Google Drive Anda dan menyimpan bobot model serta tokenizer ke folder `/NLP/mt5-qa-indonesia/`.
-
-2. **Unduh Berkas Model**:
-   - Unduh folder `mt5-qa-indonesia` dari Google Drive Anda.
-   - Pindahkan folder tersebut ke direktori utama (root) proyek ini sehingga strukturnya seperti berikut:
-     ```text
-     NLP/
-     ├── mt5-qa-indonesia/
-     │   ├── config.json
-     │   ├── generation_config.json
-     │   ├── model.safetensors
-     │   ├── spiece.model
-     │   ├── special_tokens_map.json
-     │   └── tokenizer_config.json
-     ```
+### 2. Penyusunan Model (mT5)
+Model ekstraksi jawaban menggunakan fine-tuned mT5-small yang harus diletakkan secara lokal di folder `mt5-qa-indonesia/`. Pindahkan berkas bobot model dan tokenizer ke direktori utama (root) proyek ini sehingga strukturnya seperti berikut:
+```text
+NLP/
+├── mt5-qa-indonesia/
+│   ├── config.json
+│   ├── generation_config.json
+│   ├── model.safetensors
+│   ├── tokenizer.json
+│   ├── tokenizer_config.json
+│   └── training_args.bin
+```
 
 ### 3. Pemasangan Pustaka Dependensi
 Buka shell terminal Anda, arahkan ke direktori proyek, dan jalankan perintah berikut untuk menginstal seluruh pustaka Python yang diperlukan:
@@ -140,6 +125,7 @@ FastAPI menyediakan rute antarmuka backend berbasis JSON untuk mengelola materi 
     "document_id": "c7a8b9f0-1234-5678-abcd-ef0123456789",
     "filename": "Bab_2_Neural_Networks.pdf",
     "char_count": 28450,
+    "preview": "Backpropagation merupakan algoritma pelatihan utama...",
     "suggestions": [
       "Apa yang dimaksud dengan backpropagation menurut materi?",
       "Bagaimana cara kerja activation function yang dijelaskan?",
@@ -170,7 +156,11 @@ FastAPI menyediakan rute antarmuka backend berbasis JSON untuk mengelola materi 
       "Penerapan aturan rantai kalkulus.",
       "Pembaruan bobot jaringan secara iteratif."
     ],
-    "context": "Backpropagation merupakan algoritma pelatihan utama pada neural networks..."
+    "source_quote": "Backpropagation merupakan algoritma pelatihan utama pada neural networks...",
+    "question_type": "how",
+    "mode": "mendalam",
+    "context_used": "Backpropagation merupakan algoritma pelatihan utama pada neural networks...",
+    "document_id": "c7a8b9f0-1234-5678-abcd-ef0123456789"
   }
   ```
 
