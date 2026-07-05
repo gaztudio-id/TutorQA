@@ -148,6 +148,7 @@ desktop.ini
 # Ignore the local trained mT5 model weights folder (too large for git)
 mt5-qa-indonesia/
 notebooks/
+scripts/
 
 # Local configuration and credentials
 .env
