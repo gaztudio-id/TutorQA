@@ -297,10 +297,29 @@ def compose_tutor_answer(
     if core_idx == -1:
         scored = [(score_sentence(sent, question), idx) for idx, sent in enumerate(sentences)]
         scored.sort(key=lambda x: -x[0])
-        if scored and scored[0][0] >= 0.10:
-            core_idx = scored[0][1]
+        
+        # Cari kalimat dengan skor tertinggi yang BUKAN merupakan kalimat tanya (?)
+        best_idx = -1
+        for score, idx in scored:
+            if score >= 0.10:
+                sent_clean = sentences[idx].strip()
+                if not sent_clean.endswith("?"):
+                    best_idx = idx
+                    break
+        
+        if best_idx != -1:
+            core_idx = best_idx
+        elif scored and scored[0][0] >= 0.10:
+            core_idx = scored[0][1] # fallback jika semuanya berupa kalimat tanya
         else:
             core_idx = 0 # fallback ke kalimat pertama jika tidak ada yang cocok
+
+    # Evaluasi kecocokan tertinggi untuk mendeteksi out-of-context
+    # Jika core_idx menunjuk ke kalimat tanya, coba cari alternatif yang bukan kalimat tanya
+    if sentences[core_idx].strip().endswith("?") and core_idx + 1 < len(sentences):
+        # geser ke kalimat setelahnya yang berupa penjelasan, bukan pertanyaan
+        if not sentences[core_idx + 1].strip().endswith("?"):
+            core_idx = core_idx + 1
 
     # Evaluasi kecocokan tertinggi untuk mendeteksi out-of-context
     top_score = score_sentence(sentences[core_idx], question)
