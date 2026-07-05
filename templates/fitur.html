@@ -26,7 +26,7 @@
   <!-- Dynamic Island Nav -->
   <div class="island-nav-wrap" id="islandNav">
     <nav class="island-nav" aria-label="Navigasi utama">
-      <a href="/" class="island-logo"><span class="logo-dot"></span> TutorQA</a>
+      <a href="/" class="island-logo">TutorQA</a>
       <div class="island-links">
         <a href="/fitur" class="active">Fitur</a>
         <a href="/panduan">Panduan</a>
@@ -38,9 +38,9 @@
   <main class="main-flow" style="padding-bottom: 80px;">
     <div class="container">
       <div class="guide-hero">
-        <span class="section-tag">Teknologi NLP Terdepan</span>
-        <h1>Eksplorasi Fitur & Sistem Cerdas</h1>
-        <p>TutorQA memadukan pemrosesan bahasa alami (NLP) tingkat lanjut dengan desain interaksi yang fokus untuk menunjang belajar mandiri secara objektif.</p>
+        <span class="section-tag">Cara Kerja TutorQA</span>
+        <h1>Fitur & Kemampuan TutorQA</h1>
+        <p>Pelajari bagaimana TutorQA membantu Anda belajar lebih efektif — menjawab pertanyaan langsung dari materi Anda, tanpa mengarang informasi.</p>
       </div>
 
       <div class="guide-layout">
@@ -49,50 +49,49 @@
           <div class="guide-nav-card">
             <span class="guide-nav-title">Daftar Bahasan</span>
             <div class="guide-nav-links">
-              <a href="#t5-model" class="guide-nav-link active">Model Fine-Tuning mT5</a>
-              <a href="#three-modes" class="guide-nav-link">3 Model Jawaban</a>
-              <a href="#ai-pipeline" class="guide-nav-link">Sistem Training Colab</a>
-              <a href="#smart-suggestions" class="guide-nav-link">Saran Soal Konseptual</a>
+              <a href="#t5-model" class="guide-nav-link active">Jawaban dari Dokumen Anda</a>
+              <a href="#three-modes" class="guide-nav-link">3 Mode Jawaban</a>
+              <a href="#ai-pipeline" class="guide-nav-link">Bagaimana AI Kami Belajar</a>
+              <a href="#smart-suggestions" class="guide-nav-link">Saran Soal Otomatis</a>
             </div>
           </div>
         </aside>
 
         <!-- Main Content Area -->
         <div class="guide-content">
-          <!-- Section 1: mT5 Model -->
           <section id="t5-model" class="visible">
-            <h2>Model Fine-Tuning mT5-small</h2>
-            <p>Di jantung sistem TutorQA terdapat model bahasa <strong>google/mt5-small</strong> yang telah di-fine-tune secara mendalam khusus untuk tugas <strong>Question Answering (QA)</strong> dalam bahasa Indonesia.</p>
-            
+            <h2>Jawaban Langsung dari Dokumen Anda</h2>
+            <p>Ketika Anda mengajukan pertanyaan, TutorQA tidak mengarang jawaban dari pengetahuan umum. Sistem kami membaca dokumen PDF yang Anda unggah, lalu mencari dan mengambil kalimat yang paling relevan sebagai jawaban.</p>
+
             <div class="guide-tip">
-              Model dilatih menggunakan dataset <strong>TyDi QA (Indonesian subset)</strong>, sebuah dataset QA multibahasa berkualitas tinggi dari Google yang berisi pertanyaan alami yang ditulis oleh manusia.
+              Karena jawaban diambil langsung dari teks dokumen Anda, tidak akan ada informasi palsu atau tambahan yang tidak ada di materi aslinya.
             </div>
 
-            <p>Berbeda dengan model generatif biasa yang seringkali berhalusinasi (merekayasa fakta), model mT5 di sistem kami dilatih untuk melakukan <strong>ekstraksi span semantik secara presisi</strong>. Model akan membaca konteks materi yang Anda unggah, memahami struktur semantik pertanyaan Anda, lalu secara akurat memotong cuplikan teks yang memuat inti jawaban langsung dari dokumen sumber.</p>
-            
+            <p>Ini seperti punya asisten yang sudah membaca seluruh buku Anda — dan ketika Anda bertanya, ia langsung menunjuk ke halaman yang tepat, bukan menebak-nebak.</p>
+
             <table class="guide-table">
               <thead>
                 <tr>
-                  <th>Spesifikasi</th>
-                  <th>Detail Implementasi</th>
+                  <th>Kemampuan</th>
+                  <th>Artinya untuk Anda</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Model Dasar</td>
-                  <td>Google mT5-small (Multilingual T5)</td>
+                  <td>Membaca PDF Anda</td>
+                  <td>Dokumen yang Anda unggah menjadi sumber jawaban utama</td>
                 </tr>
                 <tr>
-                  <td>Dataset Latih</td>
-                  <td>TyDi QA Gold Passage (Bahasa Indonesia)</td>
+                  <td>Tidak mengarang fakta</td>
+                  <td>Jawaban hanya dari isi dokumen, bukan imajinasi AI</td>
                 </tr>
                 <tr>
-                  <td>Metode Pelatihan</td>
-                  <td>Sequence-to-Sequence (Seq2Seq) Fine-Tuning</td>
+                  <td>Mendukung Bahasa Indonesia</td>
+                  <td>Dilatih khusus agar mengerti teks pelajaran berbahasa Indonesia</td>
                 </tr>
                 <tr>
-                  <td>Tugas Utama</td>
-                  <td>Semantic Answer Span Extraction</td>
+                  <td>Relevan dan tepat sasaran</td>
+                  <td>Menemukan kalimat yang paling sesuai dengan pertanyaan Anda</td>
                 </tr>
               </tbody>
             </table>
@@ -100,48 +99,40 @@
 
           <!-- Section 2: Three Modes -->
           <section id="three-modes">
-            <h2>Tiga Mode Jawaban Pedagogis</h2>
-            <p>Untuk menunjang kenyamanan belajar mandiri yang fleksibel, TutorQA menyediakan tiga mode penyusunan jawaban yang dirancang berdasarkan kebutuhan pemahaman siswa:</p>
-            
-            <h3>1. Mode Mendalam (Deep Study)</h3>
-            <p>Mode ini ditujukan untuk pemahaman konsep secara komprehensif. Setelah model menemukan kalimat utama yang memuat cuplikan jawaban, sistem akan memindai baris teks sebelum dan sesudahnya secara kronologis. Teks tersebut kemudian dirangkai menjadi satu paragraf penjelas yang mengalir natural, dilengkapi dengan <strong>Poin Penting (Key Takeaways)</strong> di bawahnya untuk mempermudah ingatan.</p>
+            <h2>Tiga Mode Jawaban</h2>
+            <p>Setiap orang punya cara belajar yang berbeda. Itulah kenapa TutorQA menyediakan tiga pilihan mode jawaban yang bisa Anda sesuaikan dengan kebutuhan saat itu:</p>
 
-            <h3>2. Mode Ringkas (Brief Summary)</h3>
-            <p>Dirancang untuk peninjauan materi secara kilat. Mode ini mengekstrak kalimat inti jawaban secara padat dan membatasi panjang jawaban maksimal 1 kalimat pendek (kurang dari 180 karakter), sangat cocok dibaca saat mengulang pelajaran atau *skimming* kilat.</p>
+            <h3>1. Mode Mendalam</h3>
+            <p>Cocok saat Anda ingin benar-benar memahami suatu topik. TutorQA memberikan penjelasan lengkap dengan konteks sebelum dan sesudah kalimat inti, dilengkapi poin-poin penting yang mudah diingat.</p>
 
-            <h3>3. Mode Langkah (Step-by-Step)</h3>
-            <p>Secara cerdas memilah informasi yang memuat alur proses, klasifikasi, daftar, atau metode. Teks penjelas akan diekstrak lalu dipotong-potong secara gramatikal untuk disusun menjadi <strong>daftar berurutan (numbered list)</strong> dari langkah 1 sampai 5. Mempermudah pemahaman logika prosedural.</p>
+            <h3>2. Mode Ringkas</h3>
+            <p>Butuh jawaban cepat? Mode ini memberikan jawaban singkat dalam satu kalimat — ideal saat mengulang pelajaran atau ingin mengecek pemahaman dengan cepat.</p>
+
+            <h3>3. Mode Langkah demi Langkah</h3>
+            <p>Untuk materi yang bersifat prosedural atau berurutan (seperti cara kerja sesuatu, langkah-langkah, atau klasifikasi), mode ini menyusun jawaban dalam daftar bernomor yang mudah diikuti satu per satu.</p>
           </section>
 
           <!-- Section 3: AI Pipeline -->
           <section id="ai-pipeline">
-            <h2>Arsitektur Training Colab Berkinerja Tinggi</h2>
-            <p>Pelatihan model yang disiapkan dalam berkas <code>ModelT5Train_NLP.ipynb</code> mengimplementasikan praktik terbaik (best practices) kecerdasan buatan modern untuk memastikan model memiliki pemahaman bahasa yang tinggi:</p>
-            
-            <div class="code-block">
-# Konfigurasi TrainingArguments mT5 Stabil
-args = Seq2SeqTrainingArguments(
-    learning_rate=1e-3,
-    optim="adafactor",
-    lr_scheduler_type="constant_with_warmup",
-    warmup_ratio=0.1,
-    gradient_accumulation_steps=4,
-    per_device_train_batch_size=4
-)
+            <h2>Bagaimana AI Kami Belajar</h2>
+            <p>Sebelum TutorQA bisa menjawab pertanyaan Anda, sistemnya terlebih dahulu dilatih menggunakan ribuan contoh tanya jawab dari teks berbahasa Indonesia nyata — bukan teks buatan.</p>
+
+            <div class="guide-tip">
+              Proses pelatihan ini mirip seperti seorang guru yang belajar dari ribuan soal ujian sebelum mulai mengajar. Semakin banyak dan berkualitas contoh yang dipelajari, semakin pintar sistem dalam menjawab.
             </div>
 
             <ul>
-              <li><strong>Adafactor Optimizer:</strong> Digunakan khusus sebagai pengganti AdamW karena arsitektur mT5 sangat sensitif terhadap akumulasi gradien dan sering kolaps (NaN loss). Adafactor menjaga kestabilan skala pembaruan gradien dan menghemat konsumsi memori GPU secara drastis.</li>
-              <li><strong>Gradient Accumulation (Akumulasi Gradien = 4):</strong> Mensimulasikan batch size efektif sebesar 16 secara virtual menggunakan batch fisik kecil (4) pada GPU T4 Google Colab, memberikan kestabilan gradien tanpa resiko kehabisan memori (OOM).</li>
-              <li><strong>Metrik ROUGE & Early Stopping:</strong> Sistem secara otomatis mengevaluasi presisi generasi kalimat menggunakan skor ROUGE-1, ROUGE-2, dan ROUGE-L di setiap epoch, serta menghentikan training secara otomatis jika performa evaluasi tidak membaik untuk mencegah overfitting.</li>
+              <li><strong>Dilatih dari teks nyata:</strong> AI kami belajar dari contoh pertanyaan dan jawaban yang ditulis oleh manusia asli, bukan contoh buatan, sehingga cara berpikirnya lebih alami dan relevan.</li>
+              <li><strong>Efisien di perangkat biasa:</strong> Sistem dirancang agar bisa berjalan tanpa membutuhkan komputer super canggih, sehingga bisa diakses oleh lebih banyak orang.</li>
+              <li><strong>Berhenti saat sudah cukup baik:</strong> Proses pelatihan otomatis berhenti ketika AI sudah mencapai tingkat akurasi yang baik, mencegah sistem terlalu "hafalan" dan tetap fleksibel terhadap pertanyaan baru.</li>
             </ul>
           </section>
 
           <!-- Section 4: Smart Suggestions -->
           <section id="smart-suggestions" class="guide-cta">
-            <h2>Saran Pertanyaan Konseptual Dinamis</h2>
-            <p>TutorQA tidak menggunakan template pertanyaan statis yang membosankan. Sistem kami menggunakan penganalisis teks bertenaga tinggi untuk memindai dokumen pelajaran Anda.</p>
-            <p>Sistem akan melewatkan lembar sampul/identitas metadata secara cerdas, memindai kata-kata teknis kunci (keywords), menyaring pola kalimat definisi atau proses, lalu merumuskan pertanyaan bermutu tinggi (seperti hubungan konsep atau perbedaan cara kerja) yang siap diklik secara instan oleh siswa.</p>
+            <h2>Saran Soal Otomatis</h2>
+            <p>Kadang kita bingung harus mulai dari mana — pertanyaan apa yang penting untuk ditanyakan dari sebuah materi. TutorQA membantu dengan membaca dokumen Anda terlebih dahulu, lalu menyarankan pertanyaan-pertanyaan yang sebaiknya Anda pahami.</p>
+            <p>Saran soal ini bukan pertanyaan generik. TutorQA melewatkan bagian-bagian yang tidak penting (seperti halaman sampul), lalu fokus mencari bagian materi yang paling substantif untuk dirumuskan menjadi pertanyaan yang benar-benar membantu pemahaman Anda.</p>
             <a href="/belajar" class="btn" style="border-radius: 999px;">Coba Sekarang di Ruang Belajar</a>
           </section>
         </div>
