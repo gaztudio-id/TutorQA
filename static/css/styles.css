@@ -1808,7 +1808,7 @@ kbd {
   }
 }
 
-/* —— Premium 3D Flipping Team Cards —— */
+/* —— Team Member Cards —— */
 .section-team {
   padding-bottom: 96px;
 }
@@ -1816,214 +1816,83 @@ kbd {
 .team-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 36px;
+  gap: 28px;
   margin-top: 36px;
-  perspective: 1500px;
 }
 
-.team-card-wrap {
-  width: 100%;
-  height: 440px;
-  perspective: 1500px;
-  transition: transform 0.4s var(--ease);
-}
-
-.team-card-wrap:hover {
-  transform: translateY(-6px);
-}
-
-.team-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transform-style: preserve-3d;
-  cursor: pointer;
-}
-
-.team-card-wrap:hover .team-card-inner {
-  transform: rotateY(180deg);
-}
-
-.team-card-front,
-.team-card-back {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border-radius: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.65);
-  box-shadow: 
-    0 16px 40px -10px rgba(12, 8, 59, 0.15),
-    0 8px 16px -8px rgba(12, 8, 59, 0.08),
-    0 2px 4px rgba(12, 8, 59, 0.02);
-  overflow: hidden;
-  transition: border-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
-}
-
-/* FRONT OF CARD styling */
-.team-card-front {
-  background: var(--glass-bg);
-  display: flex;
-  flex-direction: column;
-}
-
-.team-card-wrap:hover .team-card-front {
-  box-shadow: 
-    0 32px 64px -16px rgba(12, 8, 59, 0.25),
-    0 16px 32px -12px rgba(12, 8, 59, 0.12),
-    0 4px 10px rgba(12, 8, 59, 0.03);
-  border-color: rgba(255, 255, 255, 0.95);
-}
-
-
-.team-name-strip {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 32px 24px 24px;
-  background: linear-gradient(to top, rgba(12, 8, 59, 0.95) 0%, rgba(12, 8, 59, 0.4) 60%, transparent 100%);
-  text-align: left;
-  z-index: 2;
-  transition: all 0.3s var(--ease);
-}
-
-.team-name-strip h3 {
-  font-size: 19px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: var(--neutral) !important;
-  margin-bottom: 4px;
-  text-shadow: 0 2px 4px rgba(12, 8, 59, 0.4);
-}
-
-.front-nim {
-  font-size: 13px;
-  color: var(--neutral) !important;
-  font-weight: 700;
-  opacity: 0.85;
-  text-shadow: 0 1px 2px rgba(12, 8, 59, 0.4);
-}
-
-/* BACK OF CARD styling */
-.team-card-back {
+.team-member-card {
   background: linear-gradient(135deg, var(--primary) 0%, #171052 100%);
-  color: var(--neutral);
-  transform: rotateY(180deg);
-  padding: 40px 32px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 16px 40px -10px rgba(12, 8, 59, 0.3),
+    0 8px 16px -8px rgba(12, 8, 59, 0.12);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  justify-content: space-between;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 
-    0 16px 40px -10px rgba(12, 8, 59, 0.35),
-    0 0 24px rgba(195, 245, 60, 0.08);
-  transition: border-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
 }
 
-.team-card-wrap:hover .team-card-back {
-  box-shadow: 
-    0 32px 64px -16px rgba(12, 8, 59, 0.5),
-    0 0 40px rgba(195, 245, 60, 0.25);
-  border-color: rgba(255, 255, 255, 0.25);
+.team-member-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 32px 64px -16px rgba(12, 8, 59, 0.45),
+    0 0 32px rgba(195, 245, 60, 0.15);
+  border-color: rgba(255, 255, 255, 0.22);
 }
 
-.back-header {
-  text-align: left;
+.member-accent {
+  height: 4px;
+  background: linear-gradient(90deg, var(--tertiary) 0%, rgba(195, 245, 60, 0.3) 100%);
 }
 
-.back-tag {
-  display: inline-block;
-  font-size: 9px;
-  font-weight: 800;
-  color: var(--tertiary);
-  background: rgba(195, 245, 60, 0.12);
-  padding: 4px 10px;
-  border-radius: 99px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 12px;
-  border: 1px solid rgba(195, 245, 60, 0.2);
-}
-
-.team-card-back h3 {
-  font-size: 20px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: var(--neutral);
-  margin-bottom: 4px;
-}
-
-.back-nim {
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.5);
-  font-weight: 600;
-}
-
-.back-divider {
-  height: 1px;
-  background: rgba(255, 255, 255, 0.1);
-  margin: 20px 0;
-}
-
-.back-body {
-  text-align: left;
+.member-body {
+  padding: 28px 28px 20px;
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
-.jobdesk-title {
-  font-size: 11px;
+.member-body .jobdesk-title {
+  font-size: 10.5px;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.4);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.09em;
   margin-bottom: 6px;
   display: block;
 }
 
-.jobdesk-highlight {
-  font-size: 20px;
+.member-body .jobdesk-highlight {
+  font-size: 22px;
   font-weight: 800;
   color: var(--tertiary);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   text-shadow: 0 0 12px rgba(195, 245, 60, 0.3);
 }
 
-.jobdesk-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.jobdesk-list li {
-  font-size: 13px;
+.member-desc {
+  font-size: 13.5px;
+  line-height: 1.65;
   color: rgba(255, 255, 255, 0.75);
-  padding-left: 16px;
-  position: relative;
-  line-height: 1.5;
+  margin: 0;
 }
 
-.jobdesk-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 7px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--tertiary);
-  box-shadow: 0 0 6px var(--tertiary);
+.member-footer {
+  padding: 20px 28px 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.member-name {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--neutral);
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.member-nim {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.45);
+  font-weight: 600;
 }
 
 @media (max-width: 960px) {
@@ -2037,3 +1906,4 @@ kbd {
     grid-template-columns: 1fr;
   }
 }
+
